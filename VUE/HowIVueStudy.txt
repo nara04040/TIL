@@ -1,3 +1,0 @@
-1. [4시간만에 완벽하게 끝내는 vue.js](https://www.youtube.com/watch?v=b0ImUEsqaAA)
-    
-    강의보면서 실습후 팀플(pawpaw)진행
