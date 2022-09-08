@@ -192,7 +192,92 @@
  * 기존 배열을 변경시킨다.
  */
 
-let arr = [4, 2, 3, 5, 1];
+// let arr = [4, 2, 3, 5, 1];
 
-arr.reverse();
-console.log(arr); // [1, 5, 3, 2, 4]
+// arr.reverse();
+// console.log(arr); // [1, 5, 3, 2, 4]
+
+// arr.forEach(fn) : 배열 반복
+// let users = ["Mike", "Tom", "Jane"];
+// users.forEach((name, index) => {
+//   console.log(`${index + 1}. ${name}`);
+// });
+
+// arr.indexOf / arr.lastIndexOf
+// let arr = [1, 2, 3, 4, 5, 1, 2, 3];
+// console.log(arr.indexOf(3));
+// console.log(arr.indexOf(3, 3)); // 3에서 출발해서 3이나올때까지 index번호
+// console.log(arr.lastIndexOf(3)); //끝에서부터 index번호
+
+// arr.includes(); // 요소가 있는지없는지 판단, true false
+
+// ex1)
+// let arr = [1, 2, 3, 4, 5];
+
+// const result = arr.find((item) => {
+//   return item % 2 === 0;
+// });
+// console.log(result);
+
+// ex2)
+// let userList = [
+//   { name: "Mike", age: 30 },
+//   { name: "Jane", age: 27 },
+//   { name: "Nara", age: 10 },
+// ];
+
+// const result = userList.findIndex((user) => {
+//   if (user.age < 19) {
+//     return true;
+//   }
+//   return false;
+// });
+
+// console.log(result);
+
+// arr.filter (fn) 만족하는 모든 요소를 배열로 반환
+// const arr = [1, 2, 3, 4, 5, 6];
+// const result = arr.filter((item) => {
+//   return item % 2 === 0;
+// });
+// console.log(result);
+
+// arr.reverse() : 역순을 재정렬
+
+// let arr = [1, 2, 3, 4, 5];
+// console.log(arr.reverse());
+
+// arr.map(fn) 함수를 받아 특정 기능을 시행하고 새로운 배열을 반환
+// let userList = [
+//   { name: "Mike", age: 30 },
+//   { name: "Jane", age: 20 },
+//   { name: "Tom", age: 10 },
+// ];
+
+// let newUserList = userList.map((user, index) => {
+//   return Object.assign({}, user, {
+//     id: index + 1,
+//     isAdult: user.age > 19,
+//   });
+// });
+// console.log(newUserList);
+// console.log(userList);
+
+// let arr = ["hi", "im", "nara"];
+// let result = arr.join("=");
+// console.log(result);
+
+// const users = "Mike, Jane, Tom, Tony";
+// const result = users.split(",");
+
+// console.log(result);
+
+let user = {
+  name: "Mike",
+  age: 30,
+};
+let userList = ["Mike", "Tom", "Jane"];
+console.log(typeof user);
+console.log(typeof userList);
+console.log(Array.isArray(user));
+console.log(Array.isArray(userList));
