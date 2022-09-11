@@ -16,10 +16,9 @@ function solution(s) {
       answer += s[i];
     }
   }
-  let a = String(answer).split("");
-  a.unshift(s[0]);
-  a.join();
-  console.log(a);
+  let a = answer.split("");
+  a.unshift(s[0].toString());
+  console.log(a.join(""));
   return answer;
 }
 let arr = [7, 3, 9, 5, 6, 12];
