@@ -9,7 +9,7 @@
 //  ▣ 출력예제
 // 1 43215
 
-function solution(s) {
+function solutiono(s) {
   let n = arr.length;
   let answer = Array.from({ length: n }, () => 1);
 
