@@ -4,13 +4,23 @@
  * 출력 5
  */
 
+// function solution(a, b, c) {
+//   let answer;
+//   if (a < b) answer = a;
+//   else answer = b;
+//   if (c < answer) answer = c;
+
+//   return answer;
+// }
+
+// console.log(solution(6, 5, 3));
+// ============================복습==================================
 function solution(a, b, c) {
   let answer;
-  if (a < b) answer = a;
-  else answer = b;
+  if (a < b) answer = a; // 만약 a가 b보다 작다면 answer은 a이다.
+  else answer = b; // 만약 b가 a보다 크다면 answer은 b이다.
+  // 이 둘다 아니면?
   if (c < answer) answer = c;
-
   return answer;
 }
-
-console.log(solution(6, 5, 3));
+console.log(solution(6, 5, 11));
