@@ -10,18 +10,36 @@
 ▣ 입력예제 1
     3
     25 23 11 47 53 17 33
-▣ 출력예제 
-    1 3
+▣ 출력예제 1
+    3
  */
 
+// 0926 복습
+/**
+ * 문제접근
+ * 1. 주어진 첫줄은 일의 자리 숫자다. 여기에 해당되는 차번호는 있어서 안된다.
+ * 2. for문을 돌아서 10으로 나눈다음 나머지가 day와 같다면 answer에 ++증가한다.
+ */
 function solution(day, arr) {
   let answer = 0;
-  // for (let x of arr) {
-  //   if (x % 10 == day) answer++;
-  // }
+  for (let x of arr) {
+    if (x % 10 === day) answer++;
+  }
 
   return answer;
 }
-
 arr = [25, 23, 11, 47, 53, 17, 33];
 console.log(solution(3, arr));
+
+// =======================================================================
+// function solution(day, arr) {
+//   let answer = 0;
+//   // for (let x of arr) {
+//   //   if (x % 10 == day) answer++;
+//   // }
+
+//   return answer;
+// }
+
+// arr = [25, 23, 11, 47, 53, 17, 33];
+// console.log(solution(3, arr));

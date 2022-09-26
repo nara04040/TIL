@@ -12,6 +12,11 @@
 // 20 7 23 19 10 15 25 8 13
 //  ▣ 출력예제 1
 // 20 7 23 19 10 8 13
+
+// 0926복습
+/**
+ * 1.
+ */
 function solution(arr) {
   let answer = arr;
   let sum = arr.reduce((a, b) => a + b, 0);
@@ -20,14 +25,32 @@ function solution(arr) {
       if (sum - (arr[i] + arr[j]) === 100) {
         arr.splice(j, 1);
         arr.splice(i, 1);
-
-        // arr.splice(i,1), arr.splice(j,1) 하면 i번째 요소는 지워지지만 j번째 요소는 한칸씩 앞으로 당겨지기때문에 의도하지 않는 결과가나온다 그럴때는 뒤에꺼부터 지워주면된다.
       }
     }
   }
-
   return answer;
 }
 
 let arr = [20, 7, 23, 19, 10, 15, 25, 8, 13];
 console.log(solution(arr));
+
+//=================================================================
+// function solution(arr) {
+//   let answer = arr;
+//   let sum = arr.reduce((a, b) => a + b, 0);
+//   for (let i = 0; i < 8; i++) {
+//     for (let j = i + 1; j < 9; j++) {
+//       if (sum - (arr[i] + arr[j]) === 100) {
+//         arr.splice(j, 1);
+//         arr.splice(i, 1);
+
+//         // arr.splice(i,1), arr.splice(j,1) 하면 i번째 요소는 지워지지만 j번째 요소는 한칸씩 앞으로 당겨지기때문에 의도하지 않는 결과가나온다 그럴때는 뒤에꺼부터 지워주면된다.
+//       }
+//     }
+//   }
+
+//   return answer;
+// }
+
+// let arr = [20, 7, 23, 19, 10, 15, 25, 8, 13];
+// console.log(solution(arr));
