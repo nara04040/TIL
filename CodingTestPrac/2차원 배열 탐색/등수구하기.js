@@ -7,7 +7,8 @@
 // 5
 // 87 89 92 100 76
 //  ▣ 출력예제
-// 1 43215
+// 1
+// 43215
 
 function solutiono(s) {
   let n = arr.length;
