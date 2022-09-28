@@ -22,8 +22,23 @@
 // 2. 50%쿠폰을 적용시키는 단계를 생각한다.
 
 function solution(m, product) {
-  let answer;
-
+  let answer = 0;
+  n = product.length;
+  product.sort((a, b) => a[0] + a[1] - (b[0] + b[1]));
+  // console.log(product);
+  for (let i = 0; i < n; i++) {
+    let money = m - (product[i][0] / 2 + product[i][1]);
+    // 상품가격과 배달비를 합한 금액  money
+    let cnt = 1;
+    for (let j = 0; j < n; j++) {
+      if (j !== i && product[j][0] + product[j][1] > money) break;
+      if (j !== i && product[j][0] + product[j][1] <= money)
+        // 총비용이 예산보다는 작거나 같아야 살수있다
+        money -= product[j][0] + product[j][1];
+      cnt++;
+    }
+    answer = Math.max(answer, cnt);
+  }
   return answer;
 }
 
