@@ -1,0 +1,12 @@
+.App {
+  background-color: black;
+}
+
+h2 {
+  color: red;
+}
+
+#bold-text {
+  color: blue;
+  font-weight: bold;
+}
