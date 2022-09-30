@@ -19,7 +19,8 @@ function solution(s) {
     if (sH.has(x)) sH.set(x, sH.get(x) + 1);
     else sH.set(x, 1);
   }
-  let max = Number.MIN_SAFE_INTEGER;
+  // let max = Number.MIN_SAFE_INTEGER;
+  let max = 0;
   // Number.MIN_SAFE_INTEGER 의 정확한 정의 : 안전한 최소 정수값을 나타낸다
   // js가 나타낼수있는 가장 안전한 정수중 최소값을 보여줌으로 == 안전한 가장 큰수를 출력해낸다.
   for (let [key, val] of sH) {
