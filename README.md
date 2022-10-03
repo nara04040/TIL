@@ -19,7 +19,9 @@
 
 - JS
 
-  -
+  - 메서드 정리 (코테용)
+  - modules
+  - map과 set
 
 - Vue
 
