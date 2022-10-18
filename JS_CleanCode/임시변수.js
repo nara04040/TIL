@@ -19,21 +19,21 @@ function getElements1() {
 }
 //  ====================================================================
 // 예제 2
-// function getDateTime(targetDate) {
-//   let month = targetDate.getMonth();
-//   let day = targetDate.getDate();
-//   let hour = targetDate.Hours();
+function getDateTime(targetDate) {
+  let month = targetDate.getMonth();
+  let day = targetDate.getDate();
+  let hour = targetDate.Hours();
 
-//   month = month >= 10 ? month : "0" + month;
-//   day = day >= 10 ? day : "0" + day;
-//   hour = hour >= 10 ? hour : "0" + hour;
+  month = month >= 10 ? month : "0" + month;
+  day = day >= 10 ? day : "0" + day;
+  hour = hour >= 10 ? hour : "0" + hour;
 
-//   return {
-//     month,
-//     day,
-//     hour,
-//   };
-// }
+  return {
+    month,
+    day,
+    hour,
+  };
+}
 
 //  위함수를 이렇게 바꿔보자
 function getDateTime(targetDate) {
