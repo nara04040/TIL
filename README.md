@@ -6,6 +6,14 @@
 
 # Front
 
+- JS
+  - 데이터타입
+  - 메서드 정리 (코테용)
+  - modules
+  - map과 set
+  - this
+  - closure
+
 - 코딩테스트 준비
 
   - 이진탐색 [Notion](https://www.notion.so/Binary-Search-996f1834787a4246901b03cf08091397)
@@ -16,12 +24,6 @@
 - CS
 
   - 프로세스와 스레드
-
-- JS
-
-  - 메서드 정리 (코테용)
-  - modules
-  - map과 set
 
 - Vue
 
