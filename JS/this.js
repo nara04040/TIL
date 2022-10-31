@@ -29,6 +29,8 @@
 //     console.log(this); // default this => window 
 // }
 
+
+
 // printThis();
 
 // let person1 = {
