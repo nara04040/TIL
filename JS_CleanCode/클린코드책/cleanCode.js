@@ -139,4 +139,3 @@ function isClientActive(client) {
   const clientRecord = database.lookup(client);
   return clientRecord.isActive();
 }
-f;
