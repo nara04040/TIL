@@ -71,3 +71,44 @@ console.log(this.a) // 1
 또 다른 문제는 a라는 변수를 직접 호출할 때에도 1이 출력된다.
 
 이 이유는 변수 a에 접근하고자 하면 스코프 체인에서 a를 검색하다  가장 마지막에 도달하는 전역 스코프까지 올라가 L.E , 전역객체에서 해당 프로퍼티 a를 발견하여 반환하기 때문이다.
+
+<br>
+
+위 말을 인용하면 var로 변수를 선언하는 대신 window의 프로퍼티에 직접 할당하더라도 결과적으로 var로 선언한 것과 똑같이 동작한다 라는 예상을 할 수 있다.
+
+하지만 전역변수 선언과 전역객체의 프로퍼티 할당 사이에 다른경우가 존재한다.
+
+> 바로 "삭제"명령이다.
+
+<br>
+
+```javascript
+var a =1;
+delete window.a;    // false
+console.log(a, window.a, this.a);   // 1 1 1
+```
+```javascript
+var b =2;
+delete b;    // false
+console.log(b, window.b, this.b);   // 2 2 2
+```
+
+```javascript
+window.c =3;
+delete window.c;    // true
+console.log(c, window.c, this.c);   // Uncaught ReferenceError : c is not defined
+```
+
+```javascript
+window.d = 4;
+delete d;    // true
+console.log(d, window.d, this.d);   // Uncaught ReferenceError : d is not defined
+```
+
+위 코드를 본다면 전역객체의 프로퍼티로 할당한다면 삭제가되지만
+
+전역변수로 선언한 경우는 삭제가 불가하다.
+
+이는 사용자가 의도치 않게 삭제하는 것을 방지하는 차원에서 방어 전략이라고 해석한다.
+
+즉 전역변수를 선언하면 자바스크립트 엔진은 이를 자동으로 전역객체의 프로퍼티로 할당하면서 configurable속성(변경 및 삭제 가능성)을 false로 정의한다.
