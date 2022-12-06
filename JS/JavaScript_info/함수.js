@@ -44,3 +44,4 @@ function c(from, text) {
   console.log(from + ": " + text);
 }
 c("Ann", "hello"); // Ann : hello
+("");
