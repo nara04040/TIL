@@ -49,5 +49,26 @@ protected 프로퍼티 명 앞에는 _이 붙는다.
 ```javascript
 class CoffeeMachine{
     _watherAmount = 0
+
+    set wtaerAmount (value) {
+        if (value < 0) throw new Error('물의 양은 음수가 될 수 없다.');
+        this._watherAmount = value;
+    }
+
+    get waterAmount () {
+        return this._waterAmount;
+    }
+
+    constructor (power) {
+        this._power = power
+    }
 }
+
+// 커피 머신 생성
+let coffeeMachine = new CoffeMachine(100);
+
+// 물 추가
+coffeeMachine.waterAmount = -10; // Error : 물의 양은 음수가 될 수 없다.
 ```
+
+
